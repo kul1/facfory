@@ -1,0 +1,15 @@
+%table{:id=>"pending-table", :width=>"100%"}
+  %tr{:style=>"color:white; background-color:#97BF60;"}
+    %th ref
+    %th size
+    %th weight
+    %th received on
+    %th staff    
+  - @deliveries.each do |delivery|
+    %tr
+      %td= delivery.ref
+      %td= delivery.size
+      %td= delivery.weight
+      %td= date_thai delivery.received_on, :date_only=>true
+      %td= delivery.user.code
+

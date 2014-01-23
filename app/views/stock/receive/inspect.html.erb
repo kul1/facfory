@@ -1,0 +1,19 @@
+<%
+  user = current_user
+%>
+<h3><%= user.code %></h3>
+<%
+  deliver = Delivery.new
+%>
+<%= fields_for deliver do |f| %>
+  <%= f.label :ref, "Reference number" %>
+  <%= f.text_field :ref %>
+  <%= f.label :size, "Size" %>
+  <%= f.select :size, [['Small','S'],['Medium','M'],['Large','L']],{},"data-native-menu"=>"false" %>
+  <%= f.label :weight, "Weight" %>
+  <%= f.text_field :weight %>
+  <%= f.label :received_on, "Received On" %>
+  <%= f.date_field :received_on, "blackDays"=>[0,6] %>
+   <%= f.label :type.vendor, "Vendor" %>
+   <%= f.select :vendor.type, [['Small','S'],['Medium','M'],['Large','L']],{},"data-native-menu"=>"false" %>
+<% end %>
