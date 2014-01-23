@@ -1,12 +1,14 @@
 %table{:id=>"pending-table", :width=>"100%"}
   %tr{:style=>"color:white; background-color:#97BF60;"}
-    %th ref
-    %th size
-    %th weight
-    %th received on
-    %th staff    
+    %th Vendor
+    %th Reference
+    %th Size
+    %th Weight
+    %th Received on
+    %th Staff    
   - @deliveries.each do |delivery|
     %tr
+      %td= delivery.vendor_id
       %td= delivery.ref
       %td= delivery.size
       %td= delivery.weight
