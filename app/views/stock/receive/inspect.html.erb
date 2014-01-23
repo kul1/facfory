@@ -6,6 +6,8 @@
   deliver = Delivery.new
 %>
 <%= fields_for deliver do |f| %>
+  <%= f.label :vendor_id, "Vendor ID" %>
+  <%= f.text_field :vendor_id %>
   <%= f.label :ref, "Reference number" %>
   <%= f.text_field :ref %>
   <%= f.label :size, "Size" %>
@@ -14,6 +16,4 @@
   <%= f.text_field :weight %>
   <%= f.label :received_on, "Received On" %>
   <%= f.date_field :received_on, "blackDays"=>[0,6] %>
-   <%= f.label :type.vendor, "Vendor" %>
-   <%= f.select :vendor.type, [['Small','S'],['Medium','M'],['Large','L']],{},"data-native-menu"=>"false" %>
 <% end %>

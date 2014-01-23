@@ -10,5 +10,6 @@ class Person
   field :dob, :type => Date
   field :phone, :type => String
   field :photo, :type => String
+  field :type, :type => Integer
   # mindapp end
 end

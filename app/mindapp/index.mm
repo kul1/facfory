@@ -108,6 +108,7 @@
 <icon BUILTIN="edit"/>
 <node CREATED="1390495062984" ID="ID_174867238" MODIFIED="1390495086021" TEXT="# my comment for git"/>
 </node>
+<node CREATED="1390495808714" ID="ID_1868482298" MODIFIED="1390495822596" TEXT="vendor_id"/>
 </node>
 </node>
 </node>
